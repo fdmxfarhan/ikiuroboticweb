@@ -1,0 +1,16 @@
+extends layout
+block styles
+    link(rel="stylesheet", href="/css/users.css")
+
+block devices
+    form(action="/rcj/rcj-file-upload" enctype="multipart/form-data" method="POST") 
+        .file-input-view 
+            .label 
+                .text
+                    i.fa.fa-cloud-upload 
+                    | انتخاب فایل
+            input(type="file" name="rcjfile")
+        button.submit(type="submit")
+            | ارسال
+block content
+    
