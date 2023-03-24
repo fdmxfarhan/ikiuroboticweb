@@ -51,11 +51,21 @@ a{
 }
 .transparent-modal{
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
+    z-index: 1;
+}
+.black-modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.256);
     z-index: 1;
 }
 @media only screen and (min-width: 800px) {
@@ -69,6 +79,7 @@ a{
         margin-left: 10%;
         font-size: 1.4vw;
         cursor: pointer;
+        /* display: none; */
     }
     nav #nav-collapse-button:hover{
         color: var(--blue);
@@ -367,7 +378,7 @@ a{
     }
     nav #nav-collapse-view{
         z-index: 100;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         width: 100%;
