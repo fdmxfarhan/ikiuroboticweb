@@ -12,37 +12,26 @@ html
     
     body
         .black-modal
-        nav 
-            #nav-collapse-button
-                i.fa.fa-bars
-            #nav-collapse-view 
-                a.active(href="/") Home 
-                a(href="#more-about-me") About
-                a(href="#members") Members
-                a(href="/publication") Publications
-                a(href="/gallery") Gallery
-                a(href="#") Contact
-            .languages 
-                .lang#farsi FA 
-                .lang#english.active EN
+        include ./components/navbar
+        -var imageNum = 34
         section 
             .gallery
                 .images-area
-                    -for(var i=1; i<=5; i++){
+                    -for(var i=1; i<=imageNum; i++){
                         -if(i < 10)
-                            img(src="/img/gallery/0#{i}.jpg" id="img#{i}")
+                            img(src="/img/gallery/0#{i}.jpg")
                         -else
-                            img(src="/img/gallery/#{i}.jpg" id="img#{i}")
+                            img(src="/img/gallery/#{i}.jpg")
                     -}
-                -for(var i=1; i<=5; i++){
-                    .preview(id=`preview${i}`)
-                        .preview-content
-                            span.close#closebtn &times;
-                            -if(i < 10)
-                                img(src="/img/gallery/0#{i}.jpg" id="img#{i}")
-                            -else
-                                img(src="/img/gallery/#{i}.jpg" id="img#{i}")
-                -}
+                //- -for(var i=1; i<=imageNum; i++){
+                //-     .preview(id=`preview${i}`)
+                //-         .preview-content
+                //-             span.close#closebtn &times;
+                //-             -if(i < 10)
+                //-                 img(src="/img/gallery/0#{i}.jpg" id="img#{i}")
+                //-             -else
+                //-                 img(src="/img/gallery/#{i}.jpg" id="img#{i}")
+                //- -}
             script(src="/js/gallery.js")
         include ./components/footer
         //- https://mattfarley.ca/
