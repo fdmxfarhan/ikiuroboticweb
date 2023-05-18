@@ -1,13 +1,29 @@
-nav 
-    #nav-collapse-button
-        i.fa.fa-bars
-    #nav-collapse-view 
-        a.active(href="/") Home 
-        a(href="/#more-about-me") About
-        a(href="/#members") Members
-        a(href="/publication") Publications
-        a(href="/gallery") Gallery
-        a(href="#") Contact
-    .languages 
-        .lang#farsi FA 
-        .lang#english.active EN
+-if(lang == 'EN'){
+    nav 
+        #nav-collapse-button
+            i.fa.fa-bars
+        #nav-collapse-view 
+            a.active(href="/") Home 
+            a(href="/#more-about-me") About
+            a(href="/#members") Members
+            a(href="/publication") Publications
+            a(href="/gallery") Gallery
+            a(href="/#") Contact
+        .languages 
+            .lang#farsi FA 
+            .lang#english.active EN
+-}else{
+    nav 
+        #nav-collapse-button
+            i.fa.fa-bars
+        #nav-collapse-view 
+            a.active(href="/") صفحه اصلی 
+            a(href="/#more-about-me") درباره ما
+            a(href="/#members") اعضا
+            a(href="/publication") مستندات 
+            a(href="/gallery") گالری 
+            a(href="/#") تماس با ما
+        .languages 
+            a(href="/?lang=FA").lang#farsi(class="#{lang == 'FA'? 'active' : ''}") FA 
+            a(href="/?lang=EN").lang#english(class="#{lang == 'EN'? 'active' : ''}") EN
+-}

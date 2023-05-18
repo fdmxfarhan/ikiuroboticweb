@@ -41,8 +41,10 @@ body{
     border: none;
     outline: none;
     font-family: 'iransans';
-    direction: ltr;
+    /* direction: ltr; */
     background-color: white;
+    direction: rtl;
+    text-align: right;
     /* background-color: var(--light); */
 }
 a{
@@ -75,8 +77,8 @@ a{
         background-color: var(--light);
     }
     nav #nav-collapse-button{
-        float: left;
-        margin-left: 10%;
+        float: right;
+        margin-right: 10%;
         font-size: 1.4vw;
         cursor: pointer;
         /* display: none; */
@@ -86,8 +88,8 @@ a{
     }
     nav #nav-collapse-view{
         overflow: hidden;
-        float: left;
-        margin-left: 6%;
+        float: right;
+        margin-right: 6%;
         margin-top: 0.2vw;
     }
     nav #nav-collapse-view a{
@@ -106,12 +108,12 @@ a{
         font-weight: bold;
     }
     nav .languages{
-        float: right;
+        float: left;
         overflow: hidden;
-        margin-right: 10%;
+        margin-left: 10%;
     }
     nav .languages a.lang{
-        float: left;
+        float: right;
         padding: 0 1vw;
         cursor: pointer;
         color: var(--dark);
@@ -129,28 +131,32 @@ a{
     }
     header .top-info{
         position: absolute;
-        left: 10%;
+        right: 10%;
         top: 10vw;
     }
     header .top-info .hello{
         color: var(--lightgray);
         overflow: hidden;
+        direction: rtl;
+        text-align: right;
     }
     header .top-info .hello .line{
         background-color: var(--lightgray);
         display: block;
         width: 1.5vw;
         height: 0.1vw;
-        float: left;
+        float: right;
         margin-top: 0.8vw;
-        margin-right: 1vw;
+        margin-left: 1vw;
     }
     header .top-info .hello .text{
-        float: left;
+        float: right;
         color: var(--lightgray);
         font-family: 'iransans';
         font-size: 1vw;
         font-weight: bold;
+        /* direction: rtl;
+        text-align: right; */
     }
     header .top-info h1.name{
         font-family: 'iransans';
@@ -159,6 +165,8 @@ a{
         padding: 0;
         padding-top: 1vw;
         color: var(--gray);
+        direction: rtl;
+        text-align: right;
     }
     header .top-info h1.name .red{
         display: inline;
@@ -171,11 +179,13 @@ a{
         color: var(--gray);
         font-family: 'iransans';
         font-size: 1vw;
-        width: 70%;
+        width: 80%;
+        direction: rtl;
+        text-align: right;
     }
     header .top-info a.button{
         background-color: var(--red);
-        padding: 0.5vw 1.3vw;
+        padding: 0.5vw 2vw;
         font-family: 'iransans';
         font-size: 1vw;
         color: white;
@@ -205,7 +215,7 @@ a{
     header .top-image{
         position: absolute;
         top: 5vw;
-        right: 7%;
+        left: 7%;
         width: 38vw;
     }
     header .top-image img{
@@ -283,6 +293,10 @@ a{
         width: 70%;
         margin: auto;
     }
+    .triple-content .column .item{
+        width: 90%;
+        margin: auto;
+    }
     .triple-content .column.bordered{border-left: var(--lightergray) 0.1vw solid;}
     section{
         overflow: hidden;
@@ -315,13 +329,13 @@ a{
         padding-bottom: 7vw;
     }
     .two-side-cont .card{
-        float: left;
+        float: right;
         width: 50%;
         overflow: hidden;
         margin-top: 1.5vw;
     }
     .two-side-cont .card .profile-image{
-        float: left;
+        float: right;
         width: 25%;
         overflow: hidden;
         border-radius: 2vw;
@@ -331,8 +345,8 @@ a{
         width: 100%;
     }
     .two-side-cont .card .info {
-        float: left;
-        margin-left: 5%;
+        float: right;
+        margin-right: 5%;
         width: 65%;
     }
     .two-side-cont .card .info h1.name{
@@ -349,16 +363,16 @@ a{
         color: var(--gray);
     }
     .two-side-cont .card .info .item-contancts .item{
-        margin-right: 1vw;
-        float: left;
+        margin-left: 0.5vw;
+        float: right;
     }
     .two-side-cont .card .info .item-contancts .item i{
-        padding-right: 0.5vw;
-        font-size: 0.8vw;
+        padding-left: 0.5vw;
+        font-size: 0.75vw;
     }
     .two-side-cont .card .info .item-contancts .item .text{
         display: inline;
-        font-size: 0.8vw;
+        font-size: 0.75vw;
     }
 
 }
@@ -370,8 +384,8 @@ a{
         position: inherit;
     }
     nav #nav-collapse-button{
-        float: left;
-        margin-left: 10%;
+        float: right;
+        margin-right: 10%;
         font-size: 4vw;
         cursor: pointer;
     }
@@ -408,9 +422,9 @@ a{
         font-weight: bold;
     }
     nav .languages{
-        float: right;
+        float: left;
         overflow: hidden;
-        margin-right: 10%;
+        margin-left: 10%;
     }
     nav .languages .lang{
         float: left;
@@ -430,7 +444,7 @@ a{
     }
     header .top-info{
         position: absolute;
-        left: 10%;
+        right: 10%;
         top: 15vw;
     }
     header .top-info .hello{
@@ -442,12 +456,12 @@ a{
         display: block;
         width: 3.5vw;
         height: 0.5vw;
-        float: left;
+        float: right;
         margin-top: 2vw;
-        margin-right: 2vw;
+        margin-left: 2vw;
     }
     header .top-info .hello .text{
-        float: left;
+        float: right;
         color: var(--lightgray);
         font-family: 'iransans';
         font-size: 3vw;
@@ -627,13 +641,13 @@ a{
         padding-bottom: 7vw;
     }
     .two-side-cont .card{
-        float: left;
+        float: right;
         width: 100%;
         overflow: hidden;
         margin-top: 5vw;
     }
     .two-side-cont .card .profile-image{
-        float: left;
+        float: right;
         width: 25%;
         overflow: hidden;
         border-radius: 2vw;
@@ -643,8 +657,8 @@ a{
         width: 100%;
     }
     .two-side-cont .card .info {
-        float: left;
-        margin-left: 5%;
+        float: right;
+        margin-right: 5%;
         width: 65%;
     }
     .two-side-cont .card .info h1.name{
@@ -661,15 +675,15 @@ a{
         color: var(--gray);
     }
     .two-side-cont .card .info .item-contancts .item{
-        margin-right: 1vw;
-        float: left;
+        margin-right: 0.7vw;
+        float: right;
     }
     .two-side-cont .card .info .item-contancts .item i{
-        padding-right: 0.5vw;
-        font-size: 2.8vw;
+        padding-left: 0.5vw;
+        font-size: 2.5vw;
     }
     .two-side-cont .card .info .item-contancts .item .text{
         display: inline;
-        font-size: 2.8vw;
+        font-size: 2.5vw;
     }
 }

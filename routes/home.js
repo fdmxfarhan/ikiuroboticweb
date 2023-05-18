@@ -5,7 +5,19 @@ var Gallery = require('../models/Gallery');
 const { ensureAuthenticated } = require('../config/auth');
 
 router.get('/', (req, res, next) => {
-    res.render('home');
+    var {lang} = req.query;
+    if(lang) req.session.lang = lang;
+    if(!req.session.lang)     req.session.lang = 'EN';
+    if(req.session.lang == 'EN'){
+        res.render('home',{
+            lang: req.session.lang,
+        });
+    }
+    else if(req.session.lang == 'FA'){
+        res.render('home-fa',{
+            lang: req.session.lang,
+        });
+    }
     // res.redirect('/rcj');
 });
 router.get('/publication', (req, res, next) => {
