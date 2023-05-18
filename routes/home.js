@@ -21,7 +21,9 @@ router.get('/', (req, res, next) => {
     // res.redirect('/rcj');
 });
 router.get('/publication', (req, res, next) => {
-    res.render('publication');
+    res.render('publication',{
+        lang: req.session.lang,
+    });
     // res.redirect('/rcj');
 });
 router.get('/gallery', (req, res, next) => {
@@ -37,11 +39,16 @@ router.get('/gallery', (req, res, next) => {
         }
     });
     Gallery.find({}, (err, galleries) => {
-        res.render('gallery', {galleries});
+        res.render('gallery', {
+            galleries,
+            lang: req.session.lang,
+        });
     });
 });
 router.get('/home', (req, res, next) => {
-    res.render('home');
+    res.render('home',{
+        lang: req.session.lang,
+    });
 });
 
 module.exports = router;

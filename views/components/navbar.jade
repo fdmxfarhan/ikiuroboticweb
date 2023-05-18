@@ -10,8 +10,8 @@
             a(href="/gallery") Gallery
             a(href="/#") Contact
         .languages 
-            .lang#farsi FA 
-            .lang#english.active EN
+            a(href="/?lang=FA").lang#farsi(class="#{lang == 'FA'? 'active' : ''}") FA 
+            a(href="/?lang=EN").lang#english(class="#{lang == 'EN'? 'active' : ''}") EN
 -}else{
     nav 
         #nav-collapse-button
