@@ -20,10 +20,10 @@ var dashboardRoute = require('./routes/dashboard');
 
 
 // Mongo DB connect
-// mongoose.connect('mongodb://0.0.0.0:27017/ikiurobotic', {useNewUrlParser: true, useUnifiedTopology: true}, (err) =>{
-//     if(err) throw err; //console.error('DB not Connected !!');
-//     else console.log('Database connected :)');
-// });
+mongoose.connect('mongodb://0.0.0.0:27017/ikiurobotic', {useNewUrlParser: true, useUnifiedTopology: true}, (err) =>{
+    if(err) throw err; //console.error('DB not Connected !!');
+    else console.log('Database connected :)');
+});
 
 
 // express session middleware
