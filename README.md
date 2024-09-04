@@ -17,7 +17,7 @@ To run the server, we need `NodeJS` and `mongodb`. To install these tools follow
     2. Set up DNS to download mongodb:
       check DNS:
       ```
-      sudo systemd-resolve --status
+      resolvectl status
       ```
       set DNS:
       ```
