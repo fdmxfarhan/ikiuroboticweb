@@ -14,7 +14,20 @@ To run the server, we need `NodeJS` and `mongodb`. To install these tools follow
     curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
     sudo apt install nodejs
     ```
-    2. To install **MongoDB** run the commands bellow.
+    2. Set up DNS to download mongodb:
+      check DNS:
+      ```
+      sudo systemd-resolve --status
+      ```
+      set DNS:
+      ```
+      sudo resolvectl dns ens160 185.51.200.2 178.22.122.100
+      ```
+      restart service:
+      ```
+      sudo systemctl restart systemd-resolved
+      ```
+    3. To install **MongoDB** run the commands bellow.
     ```
     sudo apt-get install gnupg
     wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
